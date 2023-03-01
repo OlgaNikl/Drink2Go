@@ -1,0 +1,121 @@
+.price {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price__range-scale {
+  position: relative;
+  width: 280px;
+  height: 3px;
+  background-color: @light-grey;
+}
+
+.price__range-bar {
+  position: relative;
+  width: 241px;
+  height: 4px;
+  background-color: @primary-lighter;
+}
+
+.price__range-toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid @primary-lighter;
+  background-color: @base-white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @primary-opacity;
+    box-shadow: inset 0 0 0 2px @base-white;
+  }
+
+  &:active {
+    background-color: @base-primary;
+    box-shadow: inset 0 0 0 2px @base-white;
+  }
+
+  &:disabled {
+    border: 2px solid @base-grey;
+    background-color: @light-grey;
+
+    .price__range-bar {
+      background-color: @base-grey;
+    }
+  }
+}
+
+// .price__range-toggle:disabled .price__range-bar {
+//   background-color: @base-grey;
+//   width: 241px;
+//   height: 4px;
+// }
+
+.price__range-toggle--min {
+  left: 0;
+  top: -10px;
+}
+
+.price__range-toggle--max {
+  left: 230px;
+  top: -10px;
+}
+
+.price__range {
+  margin-bottom: 25px;
+}
+
+.price__control-wrapper {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.price__input {
+  width: 118px;
+  border: 2px solid  @primary-lighter;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: @base-black;
+  text-align: center;
+  background-color: @base-white;
+  box-sizing: border-box;
+
+  &:focus {
+    border: 2px solid  @primary-darker;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    border: 2px solid  @light-grey;
+  }
+}
+
+.price__input::placeholder {
+  color: @base-grey;
+}
+
+.price__control--min {
+  position: relative;
+  padding-right: 26px;
+}
+
+.price__control--min::after {
+  content: "";
+  width: 9px;
+  height: 2px;
+  background-color: @base-grey;
+  position: absolute;
+  right: 0;
+  top: 19px;
+  z-index: 1;
+}
