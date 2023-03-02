@@ -1,0 +1,41 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  background-color: @base-secondary;
+  bottom: 0;
+  left: -20px;
+}
+
+.contacts__address {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: @base-black;
+  margin: 0;
+  font-style: normal;
+  text-align: left;
+  padding: 0 0 16px 19px;
+}
+
+.contacts__phone {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: @base-black;
+  margin: 0;
+  text-align: left;
+  font-style: normal;
+  text-decoration: none;
+  padding-left: 19px;
+  display: block;
+}
+

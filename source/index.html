@@ -5,6 +5,9 @@
     <title>HTML Academy: Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- <link rel="stylesheet" href="/source/slider/itc-slider.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -124,69 +127,7 @@
           </ol>
         </div>
         </section>
-        <!-- <section class="slider">
-          <h2 class="visually-hidden">Новинки</h2>
-          <ul class="slider__list">
-            <li class="slider__item">
-              <img class="slider__item-image" scr="#" width="280" height="280" alt="Алюминиевая Банка с Декаф Флэт Уайт.">
-              <div class="slider__item-legend">
-                <span class="slider__item-badge">Новинка!</span>
-                <h3 class="slider__item-title">Декаф Флэт Уайт</h3>
-                <p class="slider__item-description">Свежесваренный кофе без кофеина из Эфиопии с натуральным
-                  фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
-                </p>
-                <div class="slider__item-promo">
-                  <span class="slider__item-price slider__item-price--old">295₽</span>
-                  <span class="slider__item-price slider__item-price--new">225₽</span>
-                  <button class="slider__item-button" type="button">Заказать</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <img class="slider__item-image" scr="" alt="Алюминиевая Банка с Лавандовым Латте.">
-              <div class="slider__item-legend">
-                <span class="slider__item-badge">Новинка!</span>
-                <h3 class="slider__item-title">Лавандовый Латте</h3>
-                <p class="slider__item-description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы
-                  и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
-                </p>
-                <div class="slider__item-promo">
-                  <span class="slider__item-price slider__item-price--old">285₽</span>
-                  <span class="slider__item-price slider__item-price--new">265₽</span>
-                  <button class="slider__item-button" type="button">Заказать</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <img class="slider__item-image" scr="" alt="Алюминиевая Банка с Тройным Эспрессо.">
-              <div class="slider__item-legend">
-                <span class="slider__item-badge">Новинка!</span>
-                <h3 class="slider__item-title">Тройной Эспрессо</h3>
-                <p class="slider__item-description">Мощнее укола адреналина, чернее самой тёмной ночи,
-                  этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
-                </p>
-                <div class="slider__item-promo">
-                  <span class="slider__item-price slider__item-price--old">395₽</span>
-                  <span class="slider__item-price slider__item-price--new">375₽</span>
-                  <button class="slider__item-button" type="button">Заказать</button>
-                </div>
-              </div>
-            </li>
-          </ul>
 
-          <button class="slider__button slider__button--next" type="button">
-            <span class="visually-hidden">Показать следующий слайд.</span>
-          </button>
-          <button class="slider__button slider__button--prev" type="button">
-            <span class="visually-hidden">Показать предыдущий слайд.</span>
-          </button>
-
-          <ul class="slider__pagination">
-            <li class="slider__pagination-item"></li>
-            <li class="slider__pagination-item"></li>
-            <li class="slider__pagination-item"></li>
-          </ul>
-        </section> -->
         <section class="features">
           <div class="features__wrapper">
             <header class="features__header">
@@ -249,19 +190,19 @@
                 <legend class="form__filter-title milk__title">Наличие молока:</legend>
                 <div class="milk__wrapper">
                   <label class="milk__label">Неважно
-                    <input class="milk__control" type="radio"  name="milk" value="nevermind" checked disabled>
+                    <input class="milk__control" type="radio"  name="milk" value="nevermind" checked>
                     <span class="milk__mark"></span>
                   </label>
                   <label class="milk__label">Только животное
-                    <input class="milk__control" type="radio"  name="milk" value="only-animal" disabled>
+                    <input class="milk__control" type="radio"  name="milk" value="only-animal">
                     <span class="milk__mark"></span>
                   </label>
                   <label class="milk__label">Только растительное
                     <input class="milk__control" type="radio"  name="milk" value="only-plant">
                     <span class="milk__mark"></span>
                   </label>
-                  <label class="milk__label">Без молока
-                    <input class="milk__control" type="radio"  name="milk" value="no-milk">
+                  <label class="milk__label" for="milk">Без молока
+                    <input class="milk__control" type="radio" id="milk" name="milk" value="no-milk" disabled>
                     <span class="milk__mark"></span>
                   </label>
                 </div>
@@ -286,7 +227,7 @@
                     <span class="country__mark"></span>
                   </label>
                   <label class="country__label">Перу
-                    <input class="country__input" type="checkbox" name="country" value="peru">
+                    <input class="country__input" type="checkbox" name="country" value="peru" disabled>
                     <span class="country__mark"></span>
                   </label>
                 </div>
@@ -308,7 +249,7 @@
             <ul class="catalog__list">
               <li class="catalog__card card">
                 <a class="card__link" href="#">
-                  <img class="card__image" scr="" width="130" height="188" alt="Алюминиевая Банка c нюдовой этикеткой.">
+                  <img class="card__image" src="img/coffee-can-1.jpg" width="130" height="188" alt="Алюминиевая Банка c нюдовой этикеткой.">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
                 <div class="card__content">
@@ -320,7 +261,7 @@
               </li>
               <li class="catalog__card card">
                 <a class="card__link" href="#">
-                  <img class="card__image" scr="" width="130" height="188" alt="Алюминиевая Банка c ярко-сиреневой этикеткой.">
+                  <img class="card__image" src="img/coffee-can-2.jpg" width="130" height="188" alt="Алюминиевая Банка c ярко-сиреневой этикеткой.">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
                 <div class="card__content">
@@ -332,7 +273,7 @@
               </li>
               <li class="catalog__card card">
                 <a class="card__link" href="#">
-                  <img class="card__image" scr="" width="130" height="188" alt="Алюминиевая Банка c черной этикеткой.">
+                  <img class="card__image" src="img/coffee-can-3.jpg" width="130" height="188" alt="Алюминиевая Банка c черной этикеткой.">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
                 <div class="card__content">
@@ -344,7 +285,7 @@
               </li>
               <li class="catalog__card card">
                 <a class="card__link" href="#">
-                  <img class="card__image" scr="" width="130" height="188" alt="Алюминиевая Банка c темно-розовой этикеткой.">
+                  <img class="card__image" src="img/coffee-can-4.jpg" width="130" height="188" alt="Алюминиевая Банка c темно-розовой этикеткой.">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
                 <div class="card__content">
@@ -356,7 +297,7 @@
               </li>
               <li class="catalog__card card">
                 <a class="card__link" href="#">
-                  <img class="card__image" scr="" width="130" height="188" alt="Алюминиевая Банка cо светло-коричневой этикеткой.">
+                  <img class="card__image" src="img/coffee-can-5.jpg" width="130" height="188" alt="Алюминиевая Банка cо светло-коричневой этикеткой.">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
                 <div class="card__content">
@@ -368,7 +309,7 @@
               </li>
               <li class="catalog__card card">
                 <a class="card__link" href="#">
-                  <img class="card__image" scr="" width="130" height="188" alt="Алюминиевая Банка cо светло-желтой этикеткой.">
+                  <img class="card__image" src="img/coffee-can-6.jpg" width="130" height="188" alt="Алюминиевая Банка cо светло-желтой этикеткой.">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
                 <div class="card__content">
@@ -419,13 +360,13 @@
             <section class="main-footer__social social">
               <h3 class="visually-hidden">Социальные сети.</h3>
               <a class="main-footer__logo" href="#">
-                <img class="main-footer__logo-image" src="#" alt="Логотип Drink2Go.">
+                <img class="main-footer__logo-image" src="/img/logo/logo-middle.svg" widht="82" height="36" alt="Логотип Drink2Go.">
               </a>
               <ul class="social__list">
                 <li class="social__item">
                   <a class="social__link social__link--vkontakte" href="#">
                     <svg class="social__icon" width="20" height="20">
-                      <use href="#"></use>
+                      <use href="./img/icons/VK.svg"></use>
                     </svg>
                     <span class="visually-hidden">Вконтакте.</span>
                   </a>
@@ -451,7 +392,7 @@
           </div>
 
           <div class="main-footer__section-wrapper main-footer__section-wrapper--navigation">
-            <section class="main-footer__navigation ">
+            <section class="main-footer__navigation">
             <h3 class="main-footer__list-title">Интернет-магазин</h3>
               <ul class="main-footer__list">
                 <li class="main-footer__item">
@@ -510,6 +451,9 @@
       </footer>
 
     </div>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
     <script src="/source/js/itc-slider.js" defer></script>
     <script src="./js/script.js" defer></script>
   </body>

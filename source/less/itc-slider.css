@@ -1,3 +1,12 @@
+/**
+ * ItcSlider
+ * @version 1.0.0
+ * @author https://github.com/itchief
+ * @copyright Alexander Maltsev 2020 - 2022
+ * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+ * @tutorial https://itchief.ru/javascript/slider
+ */
+
 .itc-slider {
   position: relative;
 }
@@ -8,7 +17,7 @@
 
 .itc-slider__items {
   display: flex;
-  transition: transform 0.5s;
+  transition: transform 0.5s ease;
   will-change: transform;
 }
 
@@ -23,6 +32,7 @@
   will-change: transform;
 }
 
+/* кнопки влево и вправо */
 .itc-slider__btn {
   position: absolute;
   top: 50%;
@@ -31,7 +41,7 @@
   align-items: center;
   width: 40px;
   height: 50px;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   background: rgb(0 0 0 / 20%);
   border: none;
@@ -51,9 +61,9 @@
   right: 0;
 }
 
-.itc-slider__btn:focus,
-.itc-slider__btn:hover {
-  color: #ffffff;
+.itc-slider__btn:hover,
+.itc-slider__btn:focus {
+  color: #fff;
   text-decoration: none;
   background: rgb(0 0 0 / 30%);
   outline: 0;
@@ -64,7 +74,8 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: center center/100% 100% no-repeat;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
 }
 
 .itc-slider__btn_prev::before {
@@ -72,9 +83,10 @@
 }
 
 .itc-slider__btn_next::before {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
+/* индикаторы */
 .itc-slider__indicators {
   position: absolute;
   right: 0;
