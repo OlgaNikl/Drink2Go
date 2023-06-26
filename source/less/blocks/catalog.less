@@ -1,18 +1,20 @@
 .catalog {
+  width: 100%;
   background-color: @ligthest-grey;
 }
 
 .catalog__wrapper {
-  width: 320px;
   padding: 50px 20px 44px;
   display: grid;
   grid-template-columns: 280px;
-  gap: 20px;
+  gap: 17px;
   box-sizing: border-box;
 }
 
 .catalog__header {
-  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   margin: 0 auto;
 }
 
@@ -25,7 +27,6 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: @base-primary;
-  margin-bottom: 4px;
 }
 
 .catalog__title {
@@ -34,15 +35,16 @@
   line-height: 36px;
   text-align: center;
   margin: 0;
+  margin-bottom: 2px;
   padding: 0;
 }
 
 .catalog__sorting-wrapper {
-  width: 280px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
+  padding: 22px 0 0 5px;
 }
 
 .catalog__sorting-label {
@@ -68,10 +70,11 @@
   border: none;
   border-radius: 4px;
   appearance: none;
-  background-image: url("../../img/icons/arrowdown.svg");
+  background-image: url("./../../img/icons/stack.svg#arrowdown");
   background-repeat: no-repeat;
   background-size: 10px 10px;
-  background-position: right center;
+  background-position: 94% center;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -79,12 +82,12 @@
     outline: none;
   }
 
-  &:active {
-    background-image: url("../../img/icons/arrowdown.svg");
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-    background-position: right 10px center;
-  }
+  // &:active {
+  //   background-image: url("./../../img/iconsstack.svg/#arrowup");
+  //   background-repeat: no-repeat;
+  //   background-size: 10px 10px;
+  //   background-position: 94% center;
+  // }
 }
 
 .catalog__list {
@@ -92,10 +95,10 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 280px;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
 .catalog__pagination-wrapper {
-  padding-top: 20px;
+  padding-top: 23px;
 }

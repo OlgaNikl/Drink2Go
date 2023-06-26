@@ -1,6 +1,6 @@
 .navigation {
   position: relative;
-  width: auto;
+  width: 60px;
   min-height: 60px;
   background-color: @base-white;
 }
@@ -15,7 +15,7 @@
 .navigation__toggle {
   position: relative;
   box-sizing: border-box;
-  width: 60px;
+  width: 60px; //auto//
   height: 60px;
   background-color: transparent;
   border: none;
@@ -44,9 +44,11 @@
   left: 50%;
   display: block;
   width: 16px;
-  height: 1.5px;
-  background-color: @base-black;
-  box-shadow: 0 5.5px 0 0 @base-black, 0 11px 0 0 @base-black;
+  height: 16px;
+  background-image: url("/img/burger.svg");
+  // height: 1.5px;
+  // background-color: @base-black;
+  // box-shadow: 0 5.5px 0 0 @base-black, 0 11px 0 0 @base-black;
   // transform-origin: center center;
   // transform: translate(-50%, -50%);
 }

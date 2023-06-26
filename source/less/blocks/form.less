@@ -1,4 +1,5 @@
 .form {
+  width: 100%;
   display: grid;
   gap: 24px;
 }
@@ -17,12 +18,12 @@
   color: inherit;
   text-align: left;
   padding: 0;
-  margin-bottom: 22px;
 }
 
 .form__button-wrapper {
   display: flex;
   flex-direction: column;
+  gap: 24px;
   margin: 0 auto;
 }
 
@@ -30,6 +31,17 @@
   width: 160px;
   padding: 10px 14px;
   text-align: center;
+
+  &:hover,
+  &focus {
+    background-color: @primary-lighter;
+    color: @base-white;
+  }
+
+  &:active {
+    background-color: @primary-darker;
+    color: @base-white;
+  }
 }
 
 .form__button--submit {
@@ -38,7 +50,12 @@
   font-size: 13px;
   line-height: 24px;
   color: @base-white;
-  margin-bottom: 24px;
+  margin-top: 11px;
+}
+
+.form__button--submit[disabled] {
+  background-color: @base-grey;
+  cursor: none;
 }
 
 .form__button--reset {
@@ -51,20 +68,9 @@
   border-radius: 4px;
   border: none;
   cursor: pointer;
+}
 
-  &:hover,
-  &focus {
-    background-color: @primary-lighter;
-    color: @base-white;
-  }
-
-  &:active {
-    background-color: @primary-darker;
-    color: @base-white;
-  }
-
-  &:disabled {
-    background-color: @light-grey;
-    color: @base-white;
-  }
+.form__button--reset[disabled] {
+  background-color: @light-grey;
+  cursor: none;
 }

@@ -13,6 +13,7 @@
   padding: 8px;
   border-radius: 4px;
   background-color: @base-white;
+  color: @base-primary;
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
@@ -20,10 +21,62 @@
   text-decoration: none;
   text-align: center;
   box-sizing: border-box;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background-color: @primary-lighter;
+    color: @base-white;
+
+    .pagination__icon {
+      fill: @base-white;
+      stroke: @base-white;
+    }
+  }
+
+  &:active {
+    background-color: @primary-darker;
+    color: @base-white;
+
+    .pagination__icon {
+      fill: @base-white;
+      stroke: @base-white;
+    }
+  }
+}
+
+.pagination__link[disabled] {
+  background-color: @light-grey;
+  color: @base-white;
+  cursor: default;
+
+  .pagination__icon {
+    fill: @base-white;
+    stroke: @base-white;
+  }
 }
 
 .pagination__link--current {
   background-color: transparent;
   color: @base-black;
   font-weight: 600;
+}
+
+.pagination__icon {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  fill: @base-primary;
+  stroke: @base-primary;
+}
+
+.pagination__icon--prev {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pagination__icon--next {
+  right: 50%;
+  transform: rotate(180deg) translate(-50%, 50%);
 }

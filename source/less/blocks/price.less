@@ -1,7 +1,11 @@
 .price {
-  width: 280px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.price__title {
+  margin-bottom: 30px;
 }
 
 .price__range-scale {
@@ -48,11 +52,11 @@
   }
 }
 
-// .price__range-toggle:disabled .price__range-bar {
-//   background-color: @base-grey;
-//   width: 241px;
-//   height: 4px;
-// }
+.price__range-toggle[disabled] .price__range-bar {
+  background-color: @base-grey;
+  width: 241px;
+  height: 4px;
+}
 
 .price__range-toggle--min {
   left: 0;
@@ -60,12 +64,12 @@
 }
 
 .price__range-toggle--max {
-  left: 230px;
+  left: 236px;
   top: -10px;
 }
 
 .price__range {
-  margin-bottom: 25px;
+  margin-bottom: 36px;
 }
 
 .price__control-wrapper {
@@ -79,7 +83,7 @@
   width: 118px;
   border: 2px solid  @primary-lighter;
   border-radius: 4px;
-  padding: 6px 10px;
+  padding: 5px 10px 5px 22px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
