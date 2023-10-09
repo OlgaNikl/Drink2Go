@@ -2,6 +2,23 @@
   overflow: hidden;
 }
 
-// .map-section__map {
+.map-section__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 35px 0 0;
+    min-height: 420px;
+    width: 100%;
+  }
+}
 
-// }
+.map-section__map {
+  width: 100%;
+  height: 420px;
+
+  @media (min-width: @tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 540px;
+  }
+}

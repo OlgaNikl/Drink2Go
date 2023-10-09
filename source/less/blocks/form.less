@@ -2,6 +2,14 @@
   width: 100%;
   display: grid;
   gap: 24px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2;
+    align-items: start;
+    column-gap: 18px;
+    row-gap: 40px;
+  }
 }
 
 .form__filter {
@@ -25,12 +33,26 @@
   flex-direction: column;
   gap: 24px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 180px;
+    gap: 30px;
+  }
 }
 
 .form__button {
   width: 160px;
   padding: 10px 14px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: fit-content;
+    padding: 8px 4px;
+  }
 
   &:hover,
   &focus {
@@ -51,6 +73,11 @@
   line-height: 24px;
   color: @base-white;
   margin-top: 11px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 14px;
+  }
 }
 
 .form__button--submit[disabled] {

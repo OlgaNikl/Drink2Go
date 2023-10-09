@@ -2,27 +2,65 @@
   background-color: @base-white;
   position: relative;
   width: 100%;
-  min-height: 60px;
 }
 
-.main-header--nojs {
-  padding: 0;
+.main-header--nojs .main-header__wrapper {
+  padding: 0 20px;
+  display: grid;
+  grid-template-areas:
+    "logo userlist"
+    "menu menu";
 }
 
 .main-header__wrapper {
   display: flex;
-  padding: 0 20px;
-  width: 320px;
+  padding: 0 0 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 60px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    min-height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px;
+    min-height: 80px;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .main-header__logo-wrapper {
   margin: 10px 88px 10px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 10px 5px 10px 0;
+  }
 }
 
 .main-header__logo {
   display: block;
   width: 32px;
   height: 38px;
+  grid-area: logo;
+
+  @media (min-width: @tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
+}
+
+.main-header__logo-image {
+  width: 100%;
 }
 
 .main-header__user-list {
@@ -30,6 +68,14 @@
   padding: 0;
   display: flex;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 20px;
+  }
 }
 
 .main-header__user-list-link {
@@ -39,8 +85,52 @@
   background-color: transparent;
   display: block;
   box-sizing: border-box;
+  grid-area: userlist;
+
+  &:hover,
+  &:active {
+    background-color: @base-secondary;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    padding: 32px 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 112px;
+    padding: 32px 20px;
+    gap: 8px;
+  }
 }
 
 .main-header__user-list-icon {
   fill: @base-black;
+}
+
+.main-header__user-list-text {
+  display: none;
+}
+
+@media (max-width: @desktop-width) {
+  .main-header__user-list-text {
+    display: block;
+  }
+}
+
+.main-header__text {
+  color: @base-black;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  margin: 0;
+}
+
+.main-header__text-wrapper {
+  width: 126px;
+  padding: 24px 20px;
 }

@@ -6,9 +6,15 @@
 .catalog__wrapper {
   padding: 50px 20px 44px;
   display: grid;
-  grid-template-columns: 280px;
+  grid-template-columns: 1fr;
   gap: 17px;
   box-sizing: border-box;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 80px 19px 60px;
+  }
 }
 
 .catalog__header {
@@ -16,6 +22,11 @@
   flex-direction: column;
   gap: 6px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .catalog__badge {
@@ -37,6 +48,11 @@
   margin: 0;
   margin-bottom: 2px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
 }
 
 .catalog__sorting-wrapper {
@@ -45,6 +61,12 @@
   align-items: center;
   box-sizing: border-box;
   padding: 22px 0 0 5px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+    gap: 6px;
+    padding: 22px 0 9px 0;
+  }
 }
 
 .catalog__sorting-label {
@@ -97,8 +119,20 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
 
 .catalog__pagination-wrapper {
+  width: 100%;
   padding-top: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding: 53px 0 30px;
+    width: auto;
+    margin-left: auto;
+  }
 }

@@ -25,13 +25,16 @@
               </picture>
             </a>
           </div>
+          <div class="main-header__text-wrapper">
+            <p class="main-header__text">Интернет-магазин кофейных напитков</p>
+          </div>
           <ul class="main-header__user-list">
             <li class="main-header__user-list-item">
               <a class="main-header__user-list-link" href="#">
                 <svg class="main-header__user-list-icon" width="16" height="16">
                   <use href="./img/icons/stack.svg#user"></use>
                 </svg>
-                <span class="visually-hidden">Вход</span>
+                <span class="main-header__user-list-text">Вход</span>
               </a>
             </li>
             <li class="main-header__user-list-item">
@@ -39,11 +42,11 @@
                 <svg class="main-header__user-list-icon" width="16" height="16">
                   <use href="./img/icons/stack.svg#cart"></use>
                 </svg>
-                <span class="visually-hidden">Корзина</span>
+                <span class="main-header__user-list">Корзина</span>
               </a>
             </li>
           </ul>
-          <nav class="navigation navigation--closed navigation--nojs">
+          <nav class="navigation navigation--nojs navigation--closed">
             <div class="navigation__toggle-wrapper">
               <button class="navigation__toggle" type="button">
                 <span class="visually-hidden">Открыть меню.</span>
@@ -81,14 +84,15 @@
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/flatwhite-tablet.webp 1x, img/slider/flatwhite-tablet2x.webp 2x">
                 <source type="image/webp" srcset="img/slider/flatwhite-mobile.webp 1x, img/slider/flatwhite-mobile2x.webp 2x">
                 <source media="(min-width: 1440px)" srcset="img/slider/flatwhite-desktop.png 1x, img/slider/flatwhite-desktop2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/slider/flatwhite-tablet.png 1x, img/slider/flatwhite-tablet2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./img/slider/flatwhite-tablet.png 1x, ./img/slider/flatwhite-tablet2x.jpg 2x">
                 <img class="slider__item-image" scr="./img/slider/flatwhite-mobile.png" srcset="./img/slider/flatwhite-mobile2x.png 2x" width="280" height="280" alt="Алюминиевая Банка с Декаф Флэт Уайт.">
               </picture>
               <div class="slider__item-legend">
                 <span class="slider__item-badge">Новинка!</span>
                 <h3 class="slider__item-title">Декаф Флэт Уайт</h3>
-                <p class="slider__item-description">Свежесваренный кофе без кофеина из Эфиопии с натуральным
-                  фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+                <p class="slider__item-description">Свежесваренный кофе без кофеина из&nbsp;Эфиопии
+                  с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что нужно
+                  для&nbsp;расслабления после тяжёлого рабочего дня
                 </p>
                 <div class="slider__item-promo">
                   <span class="slider__item-price slider__item-price--old">295₽</span>
@@ -164,20 +168,20 @@
               <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
             </header>
             <ul class="features__list">
-              <li class="features__item">
+              <li class="features__item features__item--speed">
                 <h3 class="features__item-title features__item-title--speed">Скорость</h3>
                 <p class="features__item-text">Готовый напиток всегда под рукой — просто открой банку</p>
               </li>
-              <li class="features__item">
+              <li class="features__item features__item--convenience">
                 <h3 class="features__item-title features__item-title--convenience">Удобство</h3>
                 <p class="features__item-text">Легко помещается и&nbsp;в&nbsp;карман,
                   и&nbsp;в&nbsp;маленькую сумочку</p>
               </li>
-              <li class="features__item">
+              <li class="features__item features__item--cheerfulness">
                 <h3 class="features__item-title features__item-title--cheerfulness">Бодрость</h3>
                 <p class="features__item-text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
               </li>
-              <li class="features__item">
+              <li class="features__item features__item--eco">
                 <h3 class="features__item-title features__item-title--eco">Экологичность</h3>
                 <p class="features__item-text">Вся упаковка сделана
                   из&nbsp;перерабатываемых материалов</p>
@@ -185,6 +189,7 @@
             </ul>
           </div>
         </section>
+
         <section class="catalog">
           <div class="catalog__wrapper">
             <header class="catalog__header">
@@ -352,11 +357,11 @@
             <div class="catalog__pagination-wrapper">
               <ul class="catalog__pagination pagination">
                 <li class="pagination__item">
-                  <a class="pagination__link" href="#">
+                  <a class="pagination__link pagination__link--text" href="#">
                     <svg class="pagination__icon pagination__icon--prev" width="10" height="6">
                       <use xlink:href="img/icons/stack.svg#arrow-left"></use>
                     </svg>
-                    <span class="visually-hidden">Назад</span>
+                    <span class="pagination__text">Назад</span>
                   </a>
                 </li>
                 <li class="pagination__item">
@@ -369,11 +374,11 @@
                   <a class="pagination__link" href="#">3</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link" href="#">
+                  <a class="pagination__link pagination__link--text" href="#">
                     <svg class="pagination__icon pagination__icon--next" width="10" height="6">
                       <use xlink:href="img/icons/stack.svg#arrow-left"></use>
                     </svg>
-                    <span class="visually-hidden">Вперед</span>
+                    <span class="pagination__text">Вперёд</span>
                   </a>
                 </li>
               </ul>
@@ -383,7 +388,7 @@
         <section class="map-section">
           <h2 class="visually-hidden">Мы находимся по адресу.</h2>
           <div class="map-section__wrapper">
-            <div class="map-section__map" id="map" style="width: 320px; height: 420px;"></div>
+            <div class="map-section__map" id="map"></div>
           </div>
           <noscript>
             <picture>
@@ -406,8 +411,8 @@
               <h3 class="visually-hidden">Социальные сети.</h3>
               <a class="main-footer__logo" href="#">
                 <picture>
-                  <sourсe media="(min-width: 768px)" srcset="img/logo-long.svg">
-                  <img class="main-footer__logo-image" src="img/logo-middle.svg" width="82" height="36" alt="Логотип Drink2Go.">
+                  <source media="(min-width: 768px)" srcset="./img/logo-long.svg">
+                  <img class="main-footer__logo-image" src="./img/logo-middle.svg" width="82" height="36" alt="Логотип Drink2Go.">
                 </picture>
               </a>
               <ul class="social__list">
