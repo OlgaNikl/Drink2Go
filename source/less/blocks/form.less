@@ -10,6 +10,21 @@
     column-gap: 18px;
     row-gap: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    height: 714px;
+    max-width: 318px;
+    grid-area: form;
+    align-items: start;
+    max-width: 317px;
+    row-gap: 29px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "price"
+      "milk"
+      "county"
+      "button";
+  }
 }
 
 .form__filter {
@@ -42,6 +57,14 @@
     margin-left: 180px;
     gap: 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-area: button;
+    margin: 0;
+    gap: 15px;
+    align-items: unset;
+    // align-items: flex-end;
+  }
 }
 
 .form__button {
@@ -52,6 +75,10 @@
   @media (min-width: @tablet-width) {
     width: fit-content;
     padding: 8px 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 150px;
   }
 
   &:hover,

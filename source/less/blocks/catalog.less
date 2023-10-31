@@ -12,8 +12,22 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: 100%;
     padding: 80px 19px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    padding: 100px 40px 90px;
+    grid-template-columns: 1fr 3fr;
+    row-gap: unset;
+    column-gap: 10px;
+    grid-template-areas:
+      "header header"
+      "form sorting"
+      "form catalog"
+      "form pagination";
+
   }
 }
 
@@ -26,6 +40,12 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: header;
+    gap: 4px;
+    margin-bottom: 40px;
   }
 }
 
@@ -67,6 +87,14 @@
     gap: 6px;
     padding: 22px 0 9px 0;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-area: sorting;
+    padding:0;
+    margin-bottom: 28px;
+    gap: 12px;
+    align-items: flex-start;
+  }
 }
 
 .catalog__sorting-label {
@@ -78,6 +106,10 @@
   margin: 0;
   margin-right: 8px;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .catalog__sorting {
@@ -97,6 +129,11 @@
   background-size: 10px 10px;
   background-position: 94% center;
   cursor: pointer;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 12px 0 10px;
+    background-position: 93% 44%;
+  }
 
   &:hover,
   &:focus {
@@ -124,6 +161,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-area: catalog;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .catalog__pagination-wrapper {
@@ -134,5 +176,9 @@
     padding: 53px 0 30px;
     width: auto;
     margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 0 30px;
   }
 }

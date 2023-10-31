@@ -10,6 +10,10 @@
 
 .price__title {
   margin-bottom: 30px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 28px;
+  }
 }
 
 .price__range {
@@ -18,6 +22,10 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 33px;
     margin-left: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 34px;
   }
 }
 
@@ -31,6 +39,10 @@
   @media (min-width: @tablet-width) {
     width: 219px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+  }
 }
 
 .price__range-bar {
@@ -41,6 +53,10 @@
 
   @media (min-width: @tablet-width) {
     width: 176px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 270px;
   }
 }
 
@@ -83,6 +99,10 @@
 .price__range-toggle--min {
   left: 0;
   top: -10px;
+
+  @media (min-width: @desktop-width) {
+    left: -8px;
+  }
 }
 
 .price__range-toggle--max {
@@ -91,6 +111,10 @@
 
   @media (min-width: @tablet-width) {
     left: 176px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 266px;
   }
 }
 
@@ -103,6 +127,13 @@
   @media (min-width: @tablet-width) {
     width: 220px;
     margin-left: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    width: 100%;
+    justify-content: unset;
+    gap: 24px;
   }
 }
 
@@ -125,6 +156,10 @@
     width: 92px;
   }
 
+  @media (min-width: @desktop-width) {
+    width: 134px;
+  }
+
   &:focus {
     border: 2px solid  @primary-darker;
     outline: none;
@@ -143,6 +178,10 @@
 .price__control--min {
   position: relative;
   padding-right: 26px;
+
+  // @media (min-width: @desktop-width) {
+  //   padding-right: 0;
+  // }
 }
 
 .price__control--min::after {
